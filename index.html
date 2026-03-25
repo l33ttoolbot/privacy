@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz | l33tbot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 2rem;
+        }
+        .bot-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+        .last-updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        main {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid #333;
+        }
+        h1 {
+            color: #00d4ff;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #333;
+        }
+        h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            color: #bbb;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+        ul {
+            margin: 1rem 0 1rem 2rem;
+            color: #ccc;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .highlight {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #00d4ff;
+            margin: 1.5rem 0;
+        }
+        .highlight p {
+            margin: 0;
+            color: #eee;
+        }
+        .data-list {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .data-list li {
+            margin: 0.75rem 0;
+        }
+        .contact-box {
+            background: rgba(123, 44, 191, 0.1);
+            border: 1px solid #7b2cbf;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .contact-box h3 {
+            color: #7b2cbf;
+            margin-top: 0;
+        }
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            main {
+                padding: 1.5rem;
+            }
+            .bot-name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="bot-name">l33tbot</h1>
+            <p class="subtitle">Discord & Telegram Bot</p>
+            <p class="last-updated">Letzte Aktualisierung: März 2025</p>
+        </header>
+
+        <main>
+            <h1>Datenschutzerklärung</h1>
+
+            <div class="highlight">
+                <p><strong>Kurzfassung:</strong> l33tbot speichert nur das Minimum an Daten, die für den Betrieb erforderlich sind. Es werden keine persönlichen Daten an Dritte weitergegeben. Deine Privatsphäre hat oberste Priorität.</p>
+            </div>
+
+            <h2>1. Verantwortlicher</h2>
+            <p>Verantwortlich für die Datenverarbeitung dieses Bots ist:</p>
+            <ul>
+                <li><strong>Name:</strong> Mike Miller</li>
+                <li><strong>Kontakt:</strong> <a href="https://t.me/mightmikemiller">@mightmikemiller</a> (Telegram)</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/l33ttoolbot">github.com/l33ttoolbot</a></li>
+            </ul>
+
+            <h2>2. Welche Daten werden verarbeitet?</h2>
+            <p>l33tbot verarbeitet folgende Daten:</p>
+
+            <div class="data-list">
+                <h3>Discord</h3>
+                <ul>
+                    <li><strong>Server-ID:</strong> Zur Identifikation des Discord-Servers</li>
+                    <li><strong>Channel-IDs:</strong> Für konfigurierte Benachrichtigungen</li>
+                    <li><strong>User-IDs:</strong> Für personalisierte Einstellungen und Berechtigungen</li>
+                    <li><strong>Nachrichteninhalte:</strong> Nur bei direkter Interaktion mit dem Bot (Befehle)</li>
+                </ul>
+
+                <h3>Telegram</h3>
+                <ul>
+                    <li><strong>Chat-ID:</strong> Zur Identifikation des Chats/Gruppe</li>
+                    <li><strong>User-ID:</strong> Für personalisierte Einstellungen</li>
+                    <li><strong>Nachrichteninhalte:</strong> Nur bei direkter Interaktion mit dem Bot (Befehle)</li>
+                </ul>
+            </div>
+
+            <h2>3. Zweck der Verarbeitung</h2>
+            <p>Die Daten werden ausschließlich verarbeitet für:</p>
+            <ul>
+                <li>Bereitstellung der Bot-Funktionen</li>
+                <li>Speicherung von Benutzereinstellungen</li>
+                <li>Statistische Auswertungen (anonymisiert)</li>
+                <li>Technische Fehlerbehebung</li>
+            </ul>
+
+            <h2>4. Speicherung und Ort</h2>
+            <p>Die Daten werden auf Servern innerhalb der Europäischen Union gespeichert. Eine Übertragung in Drittländer findet nicht statt.</p>
+
+            <h2>5. Datenweitergabe</h2>
+            <p>Es werden <strong>keine</strong> Daten an Dritte weitergegeben, verkauft oder geteilt. Ausnahmen:</p>
+            <ul>
+                <li>Gesetzlich vorgeschriebene Auskünfte an Behörden</li>
+                <li>Mit ausdrücklicher Einwilligung des Nutzers</li>
+            </ul>
+
+            <h2>6. Speicherdauer</h2>
+            <p>Gespeicherte Daten werden gelöscht:</p>
+            <ul>
+                <li>Bei Entfernung des Bots vom Server/Chat</li>
+                <li>Bei aktiver Löschanforderung durch den Nutzer</li>
+                <li>Spätestens nach 2 Jahren Inaktivität</li>
+            </ul>
+
+            <h2>7. Deine Rechte</h2>
+            <p>Du hast das Recht auf:</p>
+            <ul>
+                <li><strong>Auskunft:</strong> Welche Daten über dich gespeichert sind</li>
+                <li><strong>Berichtigung:</strong> Korrektur falscher Daten</li>
+                <li><strong>Löschung:</strong> Vollständige Löschung deiner Daten</li>
+                <li><strong>Widerspruch:</strong> Einschränkung der Verarbeitung</li>
+                <li><strong>Datenübertragbarkeit:</strong> Export deiner Daten</li>
+            </ul>
+
+            <h2>8. Cookies</h2>
+            <p>l33tbot verwendet keine Cookies und setzt keine Tracking-Mechanismen ein.</p>
+
+            <h2>9. Sicherheit</h2>
+            <p>Es werden folgende Sicherheitsmaßnahmen eingesetzt:</p>
+            <ul>
+                <li>Verschlüsselte Datenübertragung (HTTPS/TLS)</li>
+                <li>Regelmäßige Sicherheits-Updates</li>
+                <li>Beschränkter Zugriff auf Datenbanken</li>
+                <li>Keine Speicherung sensibler persönlicher Daten</li>
+            </ul>
+
+            <h2>10. Drittanbieter</h2>
+            <p>l33tbot nutzt folgende Dienste:</p>
+            <ul>
+                <li><strong>Discord API:</strong> <a href="https://discord.com/privacy">discord.com/privacy</a></li>
+                <li><strong>Telegram API:</strong> <a href="https://telegram.org/privacy">telegram.org/privacy</a></li>
+            </ul>
+
+            <div class="contact-box">
+                <h3>Kontakt bei Fragen</h3>
+                <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte wende dich an:</p>
+                <ul>
+                    <li>Telegram: <a href="https://t.me/mightmikemiller">@mightmikemiller</a></li>
+                    <li>Discord:_via Private Nachricht</li>
+                    <li>GitHub: <a href="https://github.com/l33ttoolbot/privacy/issues">Issues</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 l33tbot | <a href="https://github.com/l33ttoolbot">GitHub</a></p>
+            <p>Diese Datenschutzerklärung gilt für l33tbot auf Discord und Telegram.</p>
+        </footer>
+    </div>
+</body>
+</html>
