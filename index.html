@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz | l33tbot</title>
+    <title>Datenschutz | Beemaster</title>
     <style>
         * {
             margin: 0;
@@ -13,106 +13,146 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             line-height: 1.7;
-            color: #e0e0e0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #333;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
             min-height: 100vh;
         }
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
         header {
             text-align: center;
             padding: 3rem 0;
-            border-bottom: 1px solid #333;
+            border-bottom: 2px solid #ffc107;
             margin-bottom: 2rem;
         }
-        .bot-name {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .bee-icon {
+            font-size: 3rem;
             margin-bottom: 0.5rem;
         }
+        .app-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+        .app-name span {
+            color: #ffc107;
+        }
         .subtitle {
-            color: #888;
-            font-size: 1.1rem;
+            color: #666;
+            font-size: 1.2rem;
         }
         .last-updated {
-            color: #666;
+            color: #999;
             font-size: 0.9rem;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
         main {
-            background: rgba(255, 255, 255, 0.03);
+            background: #fff;
             border-radius: 16px;
             padding: 2.5rem;
-            border: 1px solid #333;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #00d4ff;
+            color: #f57c00;
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #ffc107;
         }
         h2 {
-            color: #fff;
+            color: #333;
             font-size: 1.4rem;
             margin: 2rem 0 1rem;
         }
         h3 {
-            color: #bbb;
+            color: #f57c00;
             font-size: 1.1rem;
             margin: 1.5rem 0 0.75rem;
         }
         p {
             margin-bottom: 1rem;
-            color: #ccc;
+            color: #555;
         }
         ul {
             margin: 1rem 0 1rem 2rem;
-            color: #ccc;
+            color: #555;
         }
         li {
             margin-bottom: 0.5rem;
         }
         .highlight {
-            background: rgba(0, 212, 255, 0.1);
+            background: #fff3e0;
             padding: 1rem 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid #00d4ff;
+            border-left: 4px solid #ffc107;
             margin: 1.5rem 0;
         }
         .highlight p {
             margin: 0;
-            color: #eee;
+            color: #e65100;
         }
-        .data-list {
-            background: rgba(255, 255, 255, 0.02);
+        .success {
+            background: #e8f5e9;
+            padding: 1rem 1.5rem;
             border-radius: 8px;
-            padding: 1.5rem;
+            border-left: 4px solid #4caf50;
             margin: 1rem 0;
         }
-        .data-list li {
-            margin: 0.75rem 0;
+        .success p {
+            margin: 0;
+            color: #2e7d32;
+        }
+        .warning {
+            background: #fff8e1;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+            margin: 1rem 0;
+        }
+        .warning p {
+            margin: 0;
+            color: #e65100;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-table th {
+            background: #fff8e1;
+            color: #333;
+            font-weight: 600;
+        }
+        .data-table td {
+            color: #555;
         }
         .contact-box {
-            background: rgba(123, 44, 191, 0.1);
-            border: 1px solid #7b2cbf;
+            background: #fff3e0;
+            border: 2px solid #ffc107;
             border-radius: 12px;
             padding: 1.5rem;
             margin-top: 2rem;
         }
         .contact-box h3 {
-            color: #7b2cbf;
+            color: #f57c00;
             margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .contact-box ul {
+            margin-top: 0.5rem;
         }
         a {
-            color: #00d4ff;
+            color: #f57c00;
             text-decoration: none;
         }
         a:hover {
@@ -132,8 +172,11 @@
             main {
                 padding: 1.5rem;
             }
-            .bot-name {
+            .app-name {
                 font-size: 2rem;
+            }
+            .data-table {
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -141,8 +184,9 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="bot-name">l33tbot</h1>
-            <p class="subtitle">Discord & Telegram Bot</p>
+            <div class="bee-icon">🐝</div>
+            <h1 class="app-name">Bee<span>master</span></h1>
+            <p class="subtitle">Die Bienenverwaltungs-App für Imker</p>
             <p class="last-updated">Letzte Aktualisierung: März 2025</p>
         </header>
 
@@ -150,106 +194,210 @@
             <h1>Datenschutzerklärung</h1>
 
             <div class="highlight">
-                <p><strong>Kurzfassung:</strong> l33tbot speichert nur das Minimum an Daten, die für den Betrieb erforderlich sind. Es werden keine persönlichen Daten an Dritte weitergegeben. Deine Privatsphäre hat oberste Priorität.</p>
+                <p><strong>Kurzfassung:</strong> Beemaster speichert alle Daten lokal auf deinem Gerät. Persönliche Daten werden verschlüsselt. Es werden keine Werbung oder Marketing-Daten gesammelt. Deine Bienenstock-Daten bleiben bei dir.</p>
             </div>
 
             <h2>1. Verantwortlicher</h2>
-            <p>Verantwortlich für die Datenverarbeitung dieses Bots ist:</p>
+            <p>Verantwortlich für die Datenverarbeitung:</p>
             <ul>
-                <li><strong>Name:</strong> Jens Kübler</li>
-                <li><strong>Kontakt:</strong> Discord via Private Nachricht</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/l33ttoolbot">github.com/l33ttoolbot</a></li>
+                <li><strong>Entwickler:</strong> Mike Miller</li>
+                <li><strong>E-Mail:</strong> <a href="mailto:privacy@beemaster.app">privacy@beemaster.app</a></li>
+                <li><strong>Telegram:</strong> <a href="https://t.me/mightmikemiller">@mightmikemiller</a></li>
             </ul>
 
-            <h2>2. Welche Daten werden verarbeitet?</h2>
-            <p>l33tbot verarbeitet folgende Daten:</p>
+            <h2>2. Welche Daten werden erhoben?</h2>
 
-            <div class="data-list">
-                <h3>Discord</h3>
-                <ul>
-                    <li><strong>Server-ID:</strong> Zur Identifikation des Discord-Servers</li>
-                    <li><strong>Channel-IDs:</strong> Für konfigurierte Benachrichtigungen</li>
-                    <li><strong>User-IDs:</strong> Für personalisierte Einstellungen und Berechtigungen</li>
-                    <li><strong>Nachrichteninhalte:</strong> Nur bei direkter Interaktion mit dem Bot (Befehle)</li>
-                </ul>
+            <h3>📱 Erforderliche App-Daten</h3>
+            <p>Daten, die für die Grundfunktionen der App benötigt werden:</p>
+            <table class="data-table">
+                <tbody>
+                    <tr>
+                        <th>Datentyp</th>
+                        <th>Zweck</th>
+                        <th>Speicherung</th>
+                    </tr>
+                    <tr>
+                        <td>Bienenstock-Daten</td>
+                        <td>Verwaltung deiner Imkerei</td>
+                        <td>Lokal auf Gerät</td>
+                    </tr>
+                    <tr>
+                        <td>Inspektions-Notizen</td>
+                        <td>Dokumentation</td>
+                        <td>Lokal auf Gerät</td>
+                    </tr>
+                    <tr>
+                        <td>GPS-Standorte</td>
+                        <td>Kartenansicht der Bienenstöcke</td>
+                        <td>Lokal auf Gerät</td>
+                    </tr>
+                    <tr>
+                        <td>Erinnerungen</td>
+                        <td>Benachrichtigungen</td>
+                        <td>Lokal auf Gerät</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <h3>Telegram</h3>
+            <h3>👤 Optionale Persönliche Daten</h3>
+            <p>Für das Imker-Profil kannst du optional angeben:</p>
+            <ul>
+                <li>Name / Imkerei-Name</li>
+                <li>E-Mail-Adresse</li>
+                <li>Telefonnummer</li>
+                <li>Adresse / Standort</li>
+            </ul>
+            <div class="success">
+                <p><strong>✓ Verschlüsselung:</strong> Persönliche Daten werden mit Android Keystore verschlüsselt gespeichert.</p>
+            </div>
+
+            <h3>📸 Medien</h3>
+            <ul>
+                <li><strong>Fotos:</strong> Bienenstock-Bilder (optional, lokal gespeichert)</li>
+                <li><strong>Sprachnotizen:</strong> Audio-Aufnahmen (optional, lokal gespeichert)</li>
+            </ul>
+
+            <h3>📊 Automatisch erhobene Daten</h3>
+            <table class="data-table">
+                <tbody>
+                    <tr>
+                        <th>Datentyp</th>
+                        <th>Zweck</th>
+                        <th>An Dritte?</th>
+                    </tr>
+                    <tr>
+                        <td>Crash-Logs</td>
+                        <td>App-Stabilität verbessern</td>
+                        <td>Firebase Crashlytics</td>
+                    </tr>
+                    <tr>
+                        <td>Nutzungsstatistiken</td>
+                        <td>App-Verbesserung</td>
+                        <td>Firebase Analytics</td>
+                    </tr>
+                    <tr>
+                        <td>Geräte-ID</td>
+                        <td>Fehlerdiagnose</td>
+                        <td>Firebase</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning">
+                <p><strong>⚠️ Firebase-Datenschutz:</strong> Crash-Logs und anonyme Nutzungsdaten werden an Google Firebase übertragen. Weitere Informationen: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></p>
+            </div>
+
+            <h2>3. Daten NICHT erhoben</h2>
+            <div class="success">
+                <p>Beemaster sammelt <strong>nicht</strong>:</p>
                 <ul>
-                    <li><strong>Chat-ID:</strong> Zur Identifikation des Chats/Gruppe</li>
-                    <li><strong>User-ID:</strong> Für personalisierte Einstellungen</li>
-                    <li><strong>Nachrichteninhalte:</strong> Nur bei direkter Interaktion mit dem Bot (Befehle)</li>
+                    <li>❌ Keine Werbe-ID</li>
+                    <li>❌ Keine Marketing-Daten</li>
+                    <li>❌ Keine Kontakte ohne Einwilligung</li>
+                    <li>❌ Keine SMS oder Anrufe</li>
+                    <li>❌ Keine Browser-Historie</li>
+                    <li>❌ Keine Gesundheitsdaten</li>
+                    <li>❌ Keine Finanzdaten</li>
+                    <li>❌ Keine Social-Media-Profile</li>
                 </ul>
             </div>
 
-            <h2>3. Zweck der Verarbeitung</h2>
-            <p>Die Daten werden ausschließlich verarbeitet für:</p>
+            <h2>4. Berechtigungen</h2>
+            <table class="data-table">
+                <tbody>
+                    <tr>
+                        <th>Berechtigung</th>
+                        <th>Verwendung</th>
+                    </tr>
+                    <tr>
+                        <td>Standort (GPS)</td>
+                        <td>Bienenstöcke auf Karte anzeigen</td>
+                    </tr>
+                    <tr>
+                        <td>Kamera</td>
+                        <td>Fotos von Bienenstöcken</td>
+                    </tr>
+                    <tr>
+                        <td>Mikrofon</td>
+                        <td>Sprachnotizen</td>
+                    </tr>
+                    <tr>
+                        <td>Benachrichtigungen</td>
+                        <td>Erinnerungen für Imker-Aufgaben</td>
+                    </tr>
+                    <tr>
+                        <td>Speicher</td>
+                        <td>Kartendaten (OSMDroid)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>5. Datenspeicherung</h2>
+            <h3>Lokal auf deinem Gerät</h3>
             <ul>
-                <li>Bereitstellung der Bot-Funktionen</li>
-                <li>Speicherung von Benutzereinstellungen</li>
-                <li>Statistische Auswertungen (anonymisiert)</li>
-                <li>Technische Fehlerbehebung</li>
+                <li><strong>Room Database:</strong> Alle Bienenstock-Daten</li>
+                <li><strong>DataStore:</strong> App-Einstellungen</li>
+                <li><strong>Android Keystore:</strong> Verschlüsselte sensible Daten</li>
             </ul>
 
-            <h2>4. Speicherung und Ort</h2>
-            <p>Die Daten werden auf Servern innerhalb der Europäischen Union gespeichert. Eine Übertragung in Drittländer findet nicht statt.</p>
+            <h3>Keine Cloud (Basis-Version)</h3>
+            <div class="success">
+                <p><strong>✓ Deine Daten bleiben bei dir:</strong> In der kostenlosen Version werden keine Daten auf Server gespeichert. Alle Daten bleiben lokal auf deinem Gerät.</p>
+            </div>
 
-            <h2>5. Datenweitergabe</h2>
-            <p>Es werden <strong>keine</strong> Daten an Dritte weitergegeben, verkauft oder geteilt. Ausnahmen:</p>
+            <h2>6. Drittanbieter</h2>
+            <h3>Firebase (Google)</h3>
             <ul>
-                <li>Gesetzlich vorgeschriebene Auskünfte an Behörden</li>
-                <li>Mit ausdrücklicher Einwilligung des Nutzers</li>
+                <li><strong>Crashlytics:</strong> Automatische Fehlerberichte</li>
+                <li><strong>Analytics:</strong> Anonyme Nutzungsstatistiken</li>
+                <li><strong>Datenschutz:</strong> <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
             </ul>
 
-            <h2>6. Speicherdauer</h2>
-            <p>Gespeicherte Daten werden gelöscht:</p>
+            <h3>OpenAI API (optional)</h3>
             <ul>
-                <li>Bei Entfernung des Bots vom Server/Chat</li>
-                <li>Bei aktiver Löschanforderung durch den Nutzer</li>
-                <li>Spätestens nach 2 Jahren Inaktivität</li>
+                <li><strong>Zweck:</strong> KI-basierte Imker-Assistenz (Premium)</li>
+                <li><strong>Aktiv:</strong> Nur bei expliziter Nutzung</li>
+                <li><strong>Datenschutz:</strong> <a href="https://openai.com/privacy">openai.com/privacy</a></li>
             </ul>
 
-            <h2>7. Deine Rechte</h2>
+            <h2>7. Deine Rechte (DSGVO)</h2>
             <p>Du hast das Recht auf:</p>
             <ul>
                 <li><strong>Auskunft:</strong> Welche Daten über dich gespeichert sind</li>
                 <li><strong>Berichtigung:</strong> Korrektur falscher Daten</li>
-                <li><strong>Löschung:</strong> Vollständige Löschung deiner Daten</li>
+                <li><strong>Löschung:</strong> Vollständige Löschung aller Daten</li>
+                <li><strong>Export:</strong> Übertragbarkeit deiner Daten</li>
                 <li><strong>Widerspruch:</strong> Einschränkung der Verarbeitung</li>
-                <li><strong>Datenübertragbarkeit:</strong> Export deiner Daten</li>
             </ul>
 
-            <h2>8. Cookies</h2>
-            <p>l33tbot verwendet keine Cookies und setzt keine Tracking-Mechanismen ein.</p>
+            <h2>8. Kinder- und Jugendschutz</h2>
+            <p>Diese App ist nicht für Kinder unter 13 Jahren bestimmt. Es werden keine gezielten Daten von Kindern erhoben.</p>
 
-            <h2>9. Sicherheit</h2>
-            <p>Es werden folgende Sicherheitsmaßnahmen eingesetzt:</p>
+            <h2>9. Datensicherheit</h2>
             <ul>
-                <li>Verschlüsselte Datenübertragung (HTTPS/TLS)</li>
-                <li>Regelmäßige Sicherheits-Updates</li>
-                <li>Beschränkter Zugriff auf Datenbanken</li>
-                <li>Keine Speicherung sensibler persönlicher Daten</li>
+                <li>✅ Verschlüsselte Datenübertragung (HTTPS/TLS)</li>
+                <li>✅ Verschlüsselte Speicherung (Android Keystore)</li>
+                <li>✅ Keine Cloud-Speicherung (lokale Daten)</li>
+                <li>✅ Regelmäßige Sicherheits-Updates</li>
             </ul>
 
-            <h2>10. Drittanbieter</h2>
-            <p>l33tbot nutzt folgende Dienste:</p>
-            <ul>
-                <li><strong>Discord API:</strong> <a href="https://discord.com/privacy">discord.com/privacy</a></li>
-                <li><strong>Telegram API:</strong> <a href="https://telegram.org/privacy">telegram.org/privacy</a></li>
-            </ul>
+            <h2>10. Änderungen</h2>
+            <p>Diese Datenschutzerklärung kann aktualisiert werden. Bei wesentlichen Änderungen wirst du in der App informiert.</p>
 
             <div class="contact-box">
                 <h3>Kontakt bei Fragen</h3>
-                <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte wende dich an:</p>
+                <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte:</p>
                 <ul>
-                    <li>Discord: via Private Nachricht</li>
-                    <li>GitHub: <a href="https://github.com/l33ttoolbot/privacy/issues">Issues</a></li>
+                    <li>📧 E-Mail: <a href="mailto:privacy@beemaster.app">privacy@beemaster.app</a></li>
+                    <li>📱 Telegram: <a href="https://t.me/mightmikemiller">@mightmikemiller</a></li>
+                    <li>🐛 GitHub: <a href="https://github.com/l33ttoolbot/beemaster-android">Issues</a></li>
                 </ul>
             </div>
         </main>
 
         <footer>
-            <p>© 2025 l33tbot | <a href="https://github.com/l33ttoolbot">GitHub</a></p>
-            <p>Diese Datenschutzerklärung gilt für l33tbot auf Discord und Telegram.</p>
+            <p>© 2025 Beemaster | <a href="https://github.com/l33ttoolbot/beemaster-android">GitHub</a></p>
+            <p>Diese Datenschutzerklärung gilt für die Beemaster Android App.</p>
         </footer>
     </div>
 </body>
